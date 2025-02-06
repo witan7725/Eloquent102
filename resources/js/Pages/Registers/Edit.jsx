@@ -58,7 +58,7 @@ export default function Edit({ table, tableNo }) {
 
     // ฟังก์ชันจัดการการลบข้อมูล
     const handleDelete = (id) => {
-        if (confirm('Are you sure you want to delete this record?')) {
+        if (confirm('Are you sure?')) {
             router.delete(`/registers/${id}`, {
                 onSuccess: () => handlePageChange('/registers/edit', selectedTable)
             });
